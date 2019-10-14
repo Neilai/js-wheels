@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./delegate-3.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li><button>Item 1</button></li>
+      <li><button>Item 2</button></li>
+      <li><button>Item 3</button></li>
+      <li><button>Item 4</button></li>
+      <li><button>Item 5</button></li>
+    </ul>
+  </body>
+  <script>
+    var ul = document.querySelector("ul");
+    delegate(ul, "button", "click", function(e) {
+      console.log(e.target);
+      console.log(e.delegateTarget);
+    });
+  </script>
+</html>
