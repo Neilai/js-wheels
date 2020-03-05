@@ -42,3 +42,7 @@ var Router = function() {
 };
 injector.register('service', Service);
 injector.register('router', Router);
+var doSomething = injector.resolve(function(service, other, router) {
+  console.log(service().name);
+});
+doSomething()
