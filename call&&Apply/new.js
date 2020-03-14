@@ -9,3 +9,9 @@ function _new(fun, ...args) {
   }
   return obj;
 }
+
+_create = function(o) {
+  let F = function() {};
+  F.prototype = o;
+  return new F();
+};
